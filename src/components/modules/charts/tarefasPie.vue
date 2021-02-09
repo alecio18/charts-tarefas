@@ -71,12 +71,20 @@ export default {
             const totalJogosPendentes = Charts.filter((Charts) => {
                 return (Charts.tipo === "jogos" && Charts.completo === false)
             })
+
+            const totalLivrosCompletos = Charts.filter((Charts) => {
+                return (Charts.tipo === "livro" && Charts.completo === true)
+            })
+
+            const totalLivrosPendentes = Charts.filter((Charts) => {
+                return (Charts.tipo === "livro" && Charts.completo === false)
+            })
             
             // Dados que serão passados para o Grafico
 
-            const labels = ['Geral Concluído', 'Geral Pendente', 'Total Mangas Concluídos', 'Total Mangas Pendentes', 'Total Jogos Concluídos', 'Total Jogos Pendentes']
+            const labels = ['Geral Concluído', 'Geral Pendente', 'Total Mangas Concluídos', 'Total Mangas Pendentes', 'Total Jogos Concluídos', 'Total Jogos Pendentes', 'Total Livros Concluídos', 'Total Livros Pendentes']
             
-            const dados = [totalConcluidas.length , totalPendentes.length, totalMangasCompletos.length, totalMangasPendente.length, totalJogosCompletos.length, totalJogosPendentes.length]
+            const dados = [totalConcluidas.length , totalPendentes.length, totalMangasCompletos.length, totalMangasPendente.length, totalJogosCompletos.length, totalJogosPendentes.length, totalLivrosCompletos.length, totalLivrosPendentes.length]
                         
             // Chamada para o Grafico            
 
@@ -198,6 +206,14 @@ export default {
                     }, {
                         name: labels[5],
                         y: dados[5]
+                    },
+                    {
+                        name: labels[6],
+                        y: dados[6]
+                    },
+                    {
+                        name: labels[7],
+                        y: dados[7]
                     }]
                 }]
             });
