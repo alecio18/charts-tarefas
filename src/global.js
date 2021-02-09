@@ -1,1 +1,1 @@
-export const graficosUrl = 'URL'
+export const graficosUrl = 'http://localhost:4010/api/tarefas'

@@ -1,7 +1,7 @@
 <template>
     <div class="admin-pages">
-            <PageTitle icon="fa fa-bar-chart" main="Titulo"
-                sub="Subtitulo" />
+            <PageTitle icon="fa fa-bar-chart" main="Charts"
+                sub="Tarefas" />
         
         <div class="admin-pages-tabs">
             <b-card no-body>
@@ -38,7 +38,7 @@ export default {
 
                axios.get(`${graficosUrl}`).then(resposta => { 
                       
-                    this.$store.commit('SET_GRAFICOS', resposta.data.body) 
+                    this.$store.commit('SET_GRAFICOS', resposta.data) 
                 })            
         },
 

@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Header title="template - limpo" />
+		<Header title="Dashboards - Tarefas" />
 		<Conteudo />
 		<Footer />		
 	</div>

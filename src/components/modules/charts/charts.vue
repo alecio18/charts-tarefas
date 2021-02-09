@@ -10,7 +10,7 @@
         <b-row> 
             <b-col xl="2"></b-col>
             <b-col xl="8" md="12">
-                <Exemplo></Exemplo>
+                <TarefasPie />
             </b-col>
             <b-col xl="2"></b-col>
         </b-row>
@@ -37,14 +37,14 @@
 
 <script>    
       
-    import Exemplo from './chartExemplo'  
+    import TarefasPie from './tarefasPie'  
     import filtroData from '../utils/filtroData'
     
     import Loading from '../../template/Loading'
 
     export default {
         
-      components: { Exemplo, Loading, filtroData }
+      components: { TarefasPie, Loading, filtroData }
     
 }
 </script>
